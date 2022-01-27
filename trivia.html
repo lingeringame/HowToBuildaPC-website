@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta charset="utf-8">
+        <title>Trivia</title>
+        <link href="styles.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="glitchEffect.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+        <script src="checkanswers.js" defer async></script>
+        <script src="fixNav.js" defer async></script>
+        <script src="hamburger.js" defer async></script>
+        <style>
+            .midheader {
+                background-image: url("brain.jpg");
+            }
+            .quiz {
+                text-align: center;
+            }  
+            .questions {
+                text-align: left;
+                margin-top: 10px;
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .questions h2 {
+                text-align: left;
+            }
+            button {
+                border: 2px solid #545e68;   
+                color: black;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 16px;
+                margin: 40px 2px;
+                transition-duration: 0.3s;
+                cursor: pointer;   
+            }
+            #button:hover {
+                background: #545e68;
+                color: white;
+            }
+            .score {
+                text-decoration: underline rgba(0,0,0,0);
+                text-underline-offset: 1em;
+                transition: text-decoration 300ms;
+            }
+            .score.line {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body id="trivia">
+        <div class="mobileNav"></div>
+        <div class="menu">
+            <nav>
+                <div id="intro-div"><a href="index.html">Intro</a></div>
+                <div id="precaution-div"><a href="precautions.html">Precautions</a></div>
+                <div id="setup-div"><a href="setup.html">Setup</a></div>
+                <div id="trivia-div"><a href="trivia.html">Trivia</a></div>
+                <div id="extra-div"><a href="extra.html">Extra</a></div>
+            </nav>
+        </div>
+        <header>
+            <nav class="interactiveButtons">
+                <div class="up"><a class="upAnchor" href="#"><span>TOP</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="index.html"><span>Intro</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="precautions.html"><span>Precautions</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="setup.html"><span>Setup</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="trivia.html"><span>Trivia</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="extra.html"><span>Extra</span></a></div>
+            </nav>
+            <div class="hoverbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        <main>
+            <div class="midheader"></div>
+            <div class="pageContent">
+                <div class='glitchBody'>
+                    <div class="stack" style="--stacks: 3;">
+                        <span style="--index: 0;">TRIVIA&nbsp</span>
+                        <span style="--index: 1;">TRIVIA&nbsp</span>
+                        <span style="--index: 2;">TRIVIA&nbsp</span>
+                    </div>
+                </div>
+                <p>
+                    Want to test your computer hardware knowledge? Take this short quiz to see how much you know assuming you read the article in the Intro section or based
+                    off your own knowledge!
+                </p>
+                <div class="quiz">
+                    <div class="score">
+                        <h2 style="padding-bottom: 3%;">You scored 0 out of 9</h2>
+                    </div>
+                    <form name="trivia">
+                        <div class="questions">
+                            <h2>1: How many transistors did the notorious Intel 4004 chip have?</h1>
+                            <input type="radio" name="Q1" value="a">
+                            a. 250 <br>
+                            <input type="radio" name="Q1" value="b">
+                            b. 2250<br>
+                            <input type="radio" name="Q1" value="c">
+                            c. 1500<br>
+                            <input type="radio" name="Q1" value="d">
+                            d. 550<br>
+                        </div>
+                        <div class="questions">
+                            <h2>2: Which of the following is false about RAM?</h1>
+                            <input type="radio" name="Q2" value="a">
+                            a. You can use up to 64GB of RAM<br>
+                            <input type="radio" name="Q2" value="b">
+                            b. RAM can handle multiple programs at once<br>
+                            <input type="radio" name="Q2" value="c">
+                            c. They can go either way when installing<br>
+                            <input type="radio" name="Q2" value="d">
+                            d. Data is immediately lost once power link is interrupted<br>
+                        </div>
+                        <div class="questions">
+                            <h2>3: Which PSU cable(s) plugs into the motherboard?</h1>
+                            <input type="radio" name="Q3" value="a">
+                            a. VGA <br>
+                            <input type="radio" name="Q3" value="b">
+                            b. 8-pin EPS<br>
+                            <input type="radio" name="Q3" value="c">
+                            c. 24-pin<br>
+                            <input type="radio" name="Q3" value="d">
+                            d. All of these<br>
+                        </div>
+                        <div class="questions">
+                            <h2>4: To what degree should you screw in your motherboard?</h1>
+                            <input type="radio" name="Q4" value="a">
+                            a. Snug <br>
+                            <input type="radio" name="Q4" value="b">
+                            b. Very tight for extra security<br>
+                            <input type="radio" name="Q4" value="c">
+                            c. A little loose to leave some space<br>
+                            <input type="radio" name="Q4" value="d">
+                            d. You just let it rest on the standoffs<br>
+                        </div>
+                        <div class="questions">
+                            <h2>5: Which of these is true about socket types?</h1>
+                            <input type="radio" name="Q5" value="a">
+                            a. AM4 works only with AMD-type processors <br>
+                            <input type="radio" name="Q5" value="b">
+                            b. Intel processors fit LGA 1501 socket types<br>
+                            <input type="radio" name="Q5" value="c">
+                            c. LGA 1501 can work for AMD but you have to install special software<br>
+                            <input type="radio" name="Q5" value="d">
+                            d. Any type of CPU can fit regardless of socket types<br>
+                        </div>
+                        <div class="questions">
+                            <h2>6: What is the first thing you should do before building?</h1>
+                            <input type="radio" name="Q6" value="a">
+                            a. Start buliding right away <br>
+                            <input type="radio" name="Q6" value="b">
+                            b. Take out your graphics card and admire it<br>
+                            <input type="radio" name="Q6" value="c">
+                            c. Ground yourself/work in a safe environment<br>
+                            <input type="radio" name="Q6" value="d">
+                            d. Not having the right tools<br>
+                        </div>
+                        <div class="questions">
+                            <h2>7: True or False, touching the connectors on any component is okay as long as you don't harm yourself.</h1>
+                            <input type="radio" name="Q7" value="a">
+                            a. True <br>
+                            <input type="radio" name="Q7" value="b">
+                            b. False<br>
+                        </div>
+                        <div class="questions">
+                            <h2>8: (Hard) What should you do before installing heatsink that is vital to your PC's performance? </h1>
+                            <input type="radio" name="Q8" value="a">
+                            a. Clean the top of processor thoroughly with a bit of water <br>
+                            <input type="radio" name="Q8" value="b">
+                            b. Make sure the cooling fan is top-notch, high quality. <br>
+                            <input type="radio" name="Q8" value="c">
+                            c. Nothing just screw it in tightly making sure contact is a firm as can be.<br>
+                            <input type="radio" name="Q8" value="d">
+                            d. Apply a little bit of thermal paste<br>
+                        </div>
+                        <div class="questions">
+                            <h2>9: Which expansion slot does the graphics card go into? </h1>
+                            <input type="radio" name="Q9" value="a">
+                            a. PCIe x16<br>
+                            <input type="radio" name="Q9" value="b">
+                            b. PCLI 16-pin port<br>
+                            <input type="radio" name="Q9" value="c">
+                            c. VGA port <br>
+                            <input type="radio" name="Q9" value="d">
+                            d. PCIe x1<br>
+                        </div>
+                        <div id="lastbutton">
+                            <button id="button">Submit Answers</button>
+                        </div>
+                    </form>    
+                </div>
+            </div>
+        </main>
+    </body>
+    <footer id="footer">
+        <span>
+            This website was intended for educational purposes only. If you have any questions click <a href="extra.html">Contact</a>
+        </span>
+    </footer>
+</html>

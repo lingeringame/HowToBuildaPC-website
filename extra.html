@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta charset="utf-8">
+        <title>Contact Me</title>
+        <link href="styles.css" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="glitchEffect.css">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+        <script src="fixNav.js" defer async></script>
+        <script src="hamburger.js" defer async></script>
+        <style>
+            .midheader {
+                display: flex;
+                height: 400px;
+                background-image: url("bluematrix.jpg");
+                background-size: cover;
+                background-position-x: 1%;
+                background-position-y: 50%;
+                animation: scroll 800s linear infinite;
+            }
+            .emailbtn {
+                display: inline-block;
+                border: 2px solid #545e68;   
+                padding: 10px 20px;
+                margin-top: 40px;
+                font-size: 16px;
+                font-weight: 600;
+                transition-duration: 0.3s;
+                cursor: pointer;   
+            }
+            .emailbtn:hover {
+                background: #545e68;
+                color: white;
+            }
+            @keyframes scroll {
+                100%{
+                    background-position:0px -3000px;
+                }
+            }
+            .paused{
+                -webkit-animation-play-state:paused;
+                -moz-animation-play-state:paused;
+                -o-animation-play-state:paused; 
+                animation-play-state:paused;
+            }
+        </style>
+    </head>
+    <body id="extra">
+        <div class="mobileNav"></div>
+        <div class="menu">
+            <nav>
+                <div id="intro-div"><a href="index.html">Intro</a></div>
+                <div id="precaution-div"><a href="precautions.html">Precautions</a></div>
+                <div id="setup-div"><a href="setup.html">Setup</a></div>
+                <div id="trivia-div"><a href="trivia.html">Trivia</a></div>
+                <div id="extra-div"><a href="extra.html">Extra</a></div>
+            </nav>
+        </div>
+        <header>
+            <nav class="interactiveButtons">
+                <div class="up"><a class="upAnchor" href="#"><span>TOP</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="index.html"><span>Intro</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="precautions.html"><span>Precautions</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="setup.html"><span>Setup</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="trivia.html"><span>Trivia</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="extra.html"><span>CONTACT</span></a></div>
+            </nav>
+            <div class="hoverbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        <main>
+            <div class="midheader"></div>
+            <div class="pageContent" style="padding-bottom: 7%; text-align: center;">
+                <p class="miniTxt">Click to stop animation</p>
+                <div class='glitchBody'>
+                    <div class="stack" style="--stacks: 3;">
+                        <span style="--index: 0;">CONTACT&nbsp</span>
+                        <span style="--index: 1;">CONTACT&nbsp</span>
+                        <span style="--index: 2;">CONTACT&nbsp</span>
+                    </div>
+                </div>
+                <h1>Any questions? Contact me </h1>
+                <div class="emailbtn">
+                    <a class="emailText" href="mailto:sochoa2@my.stlcc.edu?subject=What is a computer website" style="text-decoration: none; color: black;">
+                        E-mail Me
+                    </a>
+                </div>
+            </div>
+        </main>
+        <script>
+            const emailText = document.querySelector('.emailText');
+            const emailButton = document.querySelector('.emailbtn');
+
+            function addWhiteText() {
+                emailText.style.transitionDuration = 0.3 + "s";
+                emailText.style.color = "white";
+            }
+            
+            function removeWhiteText() {
+                emailText.style.transitionDuration = 0.3 + "s";
+                emailText.style.color = "black";
+            }
+            emailButton.addEventListener('mouseover', addWhiteText);
+            emailButton.addEventListener('mouseleave', removeWhiteText);
+
+            const movingBG = document.querySelector('.midheader');
+
+            function doStuff() {
+                movingBG.classList.toggle('paused');
+            }            
+            movingBG.addEventListener('click', doStuff)
+        </script>
+    </body>
+    <footer id="footer">
+        <span>
+            This website was intended for educational purposes only.
+        </span>
+    </footer>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <meta charset="utf-8">
+        <title>Precautions</title>
+        <link href="styles.css" rel="stylesheet"/>  
+        <link rel="stylesheet" href="glitchEffect.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+        <script src="fixNav.js" defer async></script>
+        <script src="hamburger.js" defer async></script>
+        <style>
+            .midheader {
+                background-image: url("bluematrix.jpg");
+                background-position-x: 1%;
+                background-position-y: 50%;
+                animation: scroll 800s linear infinite;
+            }
+            @keyframes scroll {
+                100%{
+                    background-position:0px -3000px;
+                }
+            }
+            .paused{
+                -webkit-animation-play-state:paused;
+                -moz-animation-play-state:paused;
+                -o-animation-play-state:paused; 
+                animation-play-state:paused;
+            }
+        </style>
+    </head>
+    <body id="precaution">
+        <div class="mobileNav"></div>
+        <div class="menu">
+            <nav>
+                <div id="intro-div"><a href="index.html">Intro</a></div>
+                <div id="precaution-div"><a href="precautions.html">Precautions</a></div>
+                <div id="setup-div"><a href="setup.html">Setup</a></div>
+                <div id="trivia-div"><a href="trivia.html">Trivia</a></div>
+                <div id="extra-div"><a href="extra.html">Extra</a></div>
+            </nav>
+        </div>
+        <header>
+            <nav class="interactiveButtons">
+                <div class="up"><a class="upAnchor" href="#"><span>TOP</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="index.html"><span>Intro</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="precautions.html"><span>Precautions</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="setup.html"><span>Setup</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="trivia.html"><span>Trivia</span></a></div>
+                <div class="captureButton"><a class="buttonLinks" href="extra.html"><span>Extra</span></a></div>
+            </nav>
+            <div class="hoverbar">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </header>
+        <main>
+            <div class="midheader"></div>
+            <div class="pageContent">
+                <p class="miniTxt">Click to stop animation</p>
+                <div class='glitchBody'>
+                    <div class="stack" style="--stacks: 3;">
+                        <span style="--index: 0;">PRECAUTIONS&nbsp</span>
+                        <span style="--index: 1;">PRECAUTIONS&nbsp</span>
+                        <span style="--index: 2;">PRECAUTIONS&nbsp</span>
+                    </div>
+                </div>
+                <p>
+                    Everyone gets excited when getting ready to build their new machine. However, there are some safety measures and tips to be taken. Here is a list of
+                    some of the most important ones.
+                </p>
+                <ul>
+                    <li>Make sure that you have a spacious area to work with. Opening up packages and laying them out takes more space than one might think.</li>
+                    <li>Make sure not to make contact with any pins or the golden interconnects. This could cause a variety of problems from the dirt or oil you may have on
+                        your hands. </li>
+                    <li>If you are on carpet or on a rug, ground yourself using an anti-static wrist wrap, as not doing so can create shock and damage
+                        a highly conductive component. Alternatively, you can use a wooden table and floor.</li>
+                    <li>Be prepared with some basic tools like a phillips-head screwdriver and some velcro straps to keep your cables separate and tidy. Some zip ties and wire cutters can help too </li>
+                    <li>I highly suggest using <a id="pcpartpicker" href="https://pcpartpicker.com/list/">PCPartpicker</a> to help you choose the ideal parts for your build. It shows you
+                        parts compatibility and different retail prices, among other things.</li>
+                    <li>Get yourself some thermal compound</li>
+                    <li>If you have no experience or don't feel confident enough on your own, make sure to follow a trusted guide or help from a knowledgeable friend. You don't want
+                        to screw your first build, but nowadays almost everyone can build one so it shouldn't be too much of a problem. 
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <script>
+            const movingBG = document.querySelector('.midheader');
+
+            function doStuff() {
+                movingBG.classList.toggle('paused');
+            }            
+            movingBG.addEventListener('click', doStuff)
+        </script>
+    </body>
+    <footer id="footer">
+        <span>
+            This website was intended for educational purposes only. If you have any questions click <a href="extra.html">Contact</a>
+        </span>
+    </footer>
+</html>
